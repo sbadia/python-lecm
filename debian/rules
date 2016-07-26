@@ -1,19 +1,6 @@
 #!/usr/bin/make -f
 
-export PYBUILD_NAME = lecm
+export PYBUILD_NAME=lecm
 
 %:
 	dh $@ --buildsystem=pybuild --with python2,python3
-
-
-override_dh_auto_test:
-	PYBUILD_SYSTEM=custom \
-	PYBUILD_TEST_ARGS="nosetests --with-coverage --cover-package=${PYBUILD_NAME}" \
-	dh_auto_test
-
-
-override_dh_auto_clean:
-	dh_auto_clean
-	[ ! -f .coverage ] || rm .coverage
-	[ ! -d lecm.egg-info ] || rm -r lecm.egg-info
-	[ ! -d __pycache__ ] || rm -r __pycache__
