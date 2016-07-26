@@ -1,0 +1,34 @@
+Source: python-lecm
+Section: python
+Priority: optional
+Maintainer: Sebastien Badia <seb@sebian.fr>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-prettytable, python-openssl, python-yaml, python-requests,
+               python-setuptools,
+               python3-all,
+               python3-setuptools
+               python3-openssl, acme-tiny, python3-prettytable, python3-yaml, python3-requests
+Standards-Version: 3.9.8
+Vcs-Browser: https://github.com/sbadia/python-lecm.git
+Vcs-Git: https://github.com/sbadia/python-lecm.git
+Homepage: https://github.com/Spredzy/lecm
+
+Package: python-lecm
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, acme-tiny, python-prettytable, python-openssl, python-yaml, python-requests
+Description: Let's Encrypt Certificate Manager (Python 2)
+ Let's Encrypt Certificates Manager (lecm) is an utility that allows one to
+ manage (generate and renew) Let's Encrypt SSL certificates.
+ .
+ This package provides the Python 2 version of the library.
+
+Package: python3-lecm
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-openssl, acme-tiny, python3-prettytable, python3-yaml, python3-requests
+Description: Let's Encrypt Certificate Manager (Python 3)
+ Let's Encrypt Certificates Manager (lecm) is an utility that allows one to
+ manage (generate and renew) Let's Encrypt SSL certificates.
+ .
+ This package provides the Python 3 version of the library.
