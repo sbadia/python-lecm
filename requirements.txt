@@ -1,5 +1,0 @@
-acme-tiny
-PrettyTable
-pyOpenSSL
-PyYAML
-requests
